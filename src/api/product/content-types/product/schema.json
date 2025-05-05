@@ -4,7 +4,8 @@
   "info": {
     "singularName": "product",
     "pluralName": "products",
-    "displayName": "Product"
+    "displayName": "Product",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -17,14 +18,15 @@
       "type": "blocks"
     },
     "banner": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "price": {
       "type": "decimal"
@@ -33,14 +35,15 @@
       "type": "boolean"
     },
     "files": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "whatsincluded": {
       "type": "blocks"
@@ -48,9 +51,11 @@
     "category": {
       "type": "enumeration",
       "enum": [
-        "TECH",
-        "MARKETING",
-        "SECURITY"
+        "MICE",
+        "KEYBOARDS",
+        "PCS",
+        "LAPTOPS",
+        "ESPORTS"
       ]
     }
   }

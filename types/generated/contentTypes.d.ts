@@ -597,6 +597,7 @@ export interface ApiPaymentPayment extends Struct.CollectionTypeSchema {
 export interface ApiProductProduct extends Struct.CollectionTypeSchema {
   collectionName: 'products';
   info: {
+    description: '';
     displayName: 'Product';
     pluralName: 'products';
     singularName: 'product';
@@ -606,7 +607,9 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
   };
   attributes: {
     banner: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    category: Schema.Attribute.Enumeration<['TECH', 'MARKETING', 'SECURITY']>;
+    category: Schema.Attribute.Enumeration<
+      ['MICE', 'KEYBOARDS', 'PCS', 'LAPTOPS', 'ESPORTS']
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
